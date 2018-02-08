@@ -36,7 +36,7 @@ namespace Assets.FantasyHeroes.Scripts
         /// <param name="direction">Pass 1 or -1 value to play forward / reverse</param>
         /// Stand; Alert; Attack; Attack Lunge; Cast; Walk; Run; Jump; Hit; Die; 
         
-        public void PlayAnimation(string clipName, Character go)
+        public void PlayAnimation(string clipName, Character go, float timer = 0)
         {
             clipName = ResolveAnimatiobClip(clipName, go);
             

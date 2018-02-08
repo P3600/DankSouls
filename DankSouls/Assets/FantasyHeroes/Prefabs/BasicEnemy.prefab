@@ -501,10 +501,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4385867551327666}
   - component: {fileID: 212770525604412186}
-  - component: {fileID: 70628443305225394}
+  - component: {fileID: 114468613743913876}
   m_Layer: 0
   m_Name: Pelvis
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -779,10 +779,10 @@ GameObject:
   - component: {fileID: 114119652309551486}
   - component: {fileID: 114715124709664622}
   - component: {fileID: 50543524336322992}
-  - component: {fileID: 114398492111772746}
+  - component: {fileID: 70574190011586568}
   m_Layer: 0
   m_Name: BasicEnemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1858,7 +1858,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 31159.594
+  m_Mass: 0.44634956
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 200
@@ -1876,7 +1876,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1920,7 +1920,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1955,20 +1955,20 @@ PolygonCollider2D:
       - {x: 0.099999994, y: -0.21}
       - {x: 0.12, y: -0.13}
       - {x: 0.19999999, y: 0.31}
---- !u!70 &70628443305225394
+--- !u!70 &70574190011586568
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1509617835651850}
+  m_GameObject: {fileID: 1734700927423416}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007383728, y: 0.46264917}
-  m_Size: {x: 1.4885229, y: 2.708107}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
   m_Direction: 0
 --- !u!95 &95161110471318754
 Animator:
@@ -2186,22 +2186,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c054d8ebe912a8344872fa7216a00115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114398492111772746
+--- !u!114 &114468613743913876
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1734700927423416}
+  m_GameObject: {fileID: 1509617835651850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 904576fa53fc43342956d2fd91596157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 0
-  damage: 0
-  attackSpeed: 0
-  attackRange: 0
-  walkSpeed: 0
+  life: 200
+  damage: 50
+  attackSpeed: 3
+  attackRange: 150
+  walkSpeed: 3
 --- !u!114 &114715124709664622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4109,7 +4109,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 380
   m_Sprite: {fileID: 21300000, guid: 148e6beee500a374eb455bd8a59468fe, type: 3}
-  m_Color: {r: 0, g: 0.78431374, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

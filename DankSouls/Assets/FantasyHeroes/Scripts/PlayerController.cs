@@ -70,9 +70,10 @@ namespace Assets.FantasyHeroes.Scripts {
             if (character.GetComponent<Rigidbody2D>().velocity.y == 0 && jumping)
             {
                 jumping = false;
-                animator.speed = 1;
+                //animator.speed = 1;
+                //animationController.PlayAnimation("Stand", character.GetComponent<Character>());
             }
-            if(jumping == false && this.animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+            if(jumping == false && character.GetComponent<Rigidbody2D>().velocity.y == 0 && !attacking && !moveB)
             {
                 animationController.Reset(character.GetComponent<Character>());
             }
@@ -90,30 +91,31 @@ namespace Assets.FantasyHeroes.Scripts {
 
         public void StopAttack()
         {
+            CancelInvoke("StopAttack");
             animationController.Reset(character.GetComponent<Character>());
             attacking = false;
         }
 
         public void Jump()
         {
-            print(character.GetComponent<Rigidbody2D>().velocity);
             if(!jumping)
             {
                 StopAttack();
                 character.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 650, 0);
                 animationController.PlayAnimation("Jump", character.GetComponent<Character>());
-                Invoke("PauseAnimation", 0.49f);
                 jumping = true;
+                //Invoke("PauseAnimation", 0.49f);
             }
         }
 
-        public void PauseAnimation()
+        /*public void PauseAnimation()
         {
             if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
             {
+                print("Freeze");
                 animator.speed = 0;
             }
-        }
+        }*/
 
         public void MoveChar(string dm)
         {
@@ -129,14 +131,14 @@ namespace Assets.FantasyHeroes.Scripts {
                     {
                         FlipChar();
                     }
-                    animationController.PlayAnimation("Run", character.GetComponent<Character>());
+                    if (!jumping) { animationController.PlayAnimation("Run", character.GetComponent<Character>()); }
                     break;
                 case "right":
                     if (character.transform.localScale.x < 0)
                     {
                         FlipChar();
                     }
-                    animationController.PlayAnimation("Run", character.GetComponent<Character>());
+                    if (!jumping) { animationController.PlayAnimation("Run", character.GetComponent<Character>()); }
                     break;
             }
             if (mode == "run")

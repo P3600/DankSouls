@@ -1,6 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+=======
 # Visual Studio 2017
+>>>>>>> origin/master
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DankSouls", "DankSouls.csproj", "{E902871D-87E3-113B-FE97-C00F5441E939}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DankSouls.Editor", "DankSouls.Editor.csproj", "{E3705777-7718-4BBF-83B6-37F4B599CDD4}"
