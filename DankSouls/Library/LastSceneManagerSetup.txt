@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/MainScenes/CharacterMenu.unity
+- path: Assets/FantasyHeroes/Scenes/SpriteSheetMaker.unity
   isLoaded: 1
   isActive: 1
